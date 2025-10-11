@@ -1,0 +1,6 @@
+-- INSERT INTO tb_oculos
+-- (name, oculos_year, genre, review_score, img_url, short_description, long_description)
+-- VALUES
+--     ('Plantaris', 2025, 'Unissex', 5.0, 'https://www.oakley.com/plantaris',
+--      'abcdefs',
+--      '123abcdef');

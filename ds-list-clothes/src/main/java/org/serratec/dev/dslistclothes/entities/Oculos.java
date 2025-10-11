@@ -17,7 +17,11 @@ public class Oculos {
     private String genre;
     private Double reviewScore;
     private String imgUrl;
+
+    @Column(length = 100)
     private String shortDescription;
+
+    @Column(length = 255)
     private String longDescription;
 
     public Oculos() {
