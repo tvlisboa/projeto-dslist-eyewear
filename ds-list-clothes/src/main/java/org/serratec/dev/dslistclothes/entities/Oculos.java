@@ -28,8 +28,8 @@ public class Oculos {
     }
 
     public Oculos(Long id, String name, Integer year,
-                  String genre, Double review_score,
-                  String img_url, String shortDescription,
+                  String genre, Double reviewScore,
+                  String imgUrl, String shortDescription,
                   String longDescription) {
         this.id = id;
         this.name = name;
