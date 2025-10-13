@@ -1,6 +1,51 @@
--- INSERT INTO tb_oculos
--- (name, oculos_year, genre, review_score, img_url, short_description, long_description)
+-- INSERT INTO tb_oculos (name, oculos_year, genre, review_score, img_url, short_description, long_description)
 -- VALUES
---     ('Plantaris', 2025, 'Unissex', 5.0, 'https://www.oakley.com/plantaris',
---      'abcdefs',
---      '123abcdef');
+--     ('OAKLEY JULIET - CARBON', 199, 'MASCULINO', 4.9, 'https://images.tcdn.com.br/img/img_prod/1139123/juliet_carbon_polished_lentes_black_lente_extra_1988_2_1054ec361b0553fbd08cbc968c775b6d.jpg',
+--      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, massa in sodales faucibus, nunc.',
+--      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et dapibus lorem. Donec nibh augue, maximus quis ultrices ac, posuere sit amet quam. Morbi sit amet auctor leo. Nullam eu mauris venenatis, luctus nibh at.');
+--
+--
+--
+-- -- INSERT INTO tb_oculos
+-- -- (name, oculos_year, genre, review_score, img_url, short_description, long_description)
+-- -- VALUES
+-- --     ('FLUX VECTOR', 2025, 'Masculino', 4.8, 'https://www.oakley.com/pt-br/product/W0OO9460?variant=888392641999',
+-- --      'Com linhas angulares e aerodinâmicas, o Flux Vector combina leveza e firmeza para o uso esportivo.',
+-- --      'Feito em O-Matter™ de alta resistência, possui hastes ventiladas para melhor fluxo de ar e conforto prolongado. As lentes com tecnologia Prizm™ Road otimizam o contraste e a visibilidade em ambientes urbanos e rodovias.'),
+-- --
+-- --     ('LYRA EDGE', 2025, 'Feminino', 4.9, 'https://www.oakley.com/pt-br/product/W0OO9442?variant=888392642120',
+-- --      'Design leve e elegante para quem busca estilo e performance.',
+-- --      'As lentes arredondadas com Prizm™ Black Polarized reduzem o brilho e realçam os tons naturais. Ideal para o dia a dia, o Lyra Edge combina sofisticação e tecnologia com um ajuste preciso e confortável.'),
+-- --
+-- --     ('TERRAFORM', 2024, 'Unissex', 4.7, 'https://www.oakley.com/pt-br/product/W0OO9428?variant=888392640512',
+-- --      'Inspirado em terrenos acidentados e aventuras outdoor, o Terraform entrega robustez e estilo moderno.',
+-- --      'A estrutura reforçada garante durabilidade extrema. O encaixe anatômico e as lentes Prizm™ Trail oferecem nitidez superior em ambientes naturais e trilhas.'),
+-- --
+-- --     ('ECLIPSE PRO', 2025, 'Masculino', 5.0, 'https://www.oakley.com/pt-br/product/W0OO9455?variant=888392643205',
+-- --      'Modelo esportivo de alto desempenho com design envolvente.',
+-- --      'A curvatura ampla proporciona cobertura total e estabilidade durante o movimento. As lentes Prizm™ Sapphire garantem proteção total contra UV e visão impecável mesmo sob sol intenso.'),
+-- --
+-- --     ('VORTEX AIR', 2025, 'Feminino', 4.6, 'https://www.oakley.com/pt-br/product/W0OO9449?variant=888392640732',
+-- --      'Design ultraleve inspirado em correntes de ar e fluidez.',
+-- --      'As hastes finas e flexíveis em O-Matter™ proporcionam conforto durante todo o dia. Lentes Prizm™ Rose Gold aprimoram os detalhes e realçam cores quentes em ambientes urbanos e naturais.'),
+-- --
+-- --     ('SPECTRUM RX', 2023, 'Unissex', 4.5, 'https://www.oakley.com/pt-br/product/W0OO9417?variant=888392639988',
+-- --      'Um clássico reinterpretado com tecnologia moderna.',
+-- --      'Com estrutura reforçada e ponte ajustável em três níveis, o Spectrum RX é compatível com lentes de grau e oferece transição perfeita entre estilo de rua e esportividade.'),
+-- --
+-- --     ('NEBULA SHIFT', 2025, 'Unissex', 4.9, 'https://www.oakley.com/pt-br/product/W0OO9439?variant=888392640899',
+-- --      'Inspirado nas cores do cosmos e na velocidade da luz.',
+-- --      'Com lentes espelhadas Iridium™ e design geométrico futurista, o Nebula Shift combina performance e atitude. Ideal para quem busca diferenciação e proteção de alto nível.'),
+-- --
+-- --     ('CRUX ZERO', 2024, 'Masculino', 4.7, 'https://www.oakley.com/pt-br/product/W0OO9421?variant=888392641554',
+-- --      'Minimalista e resistente, o Crux Zero oferece o equilíbrio perfeito entre leveza e estrutura.',
+-- --      'As hastes de titânio escovado proporcionam conforto e rigidez. As lentes Prizm™ Deep Water reduzem reflexos e aumentam a clareza visual em ambientes náuticos.'),
+-- --
+-- --     ('SOLARIS FRAME', 2025, 'Feminino', 4.8, 'https://www.oakley.com/pt-br/product/W0OO9450?variant=888392642980',
+-- --      'Com curvas suaves e acabamento translúcido, o Solaris Frame expressa leveza e autenticidade.',
+-- --      'A lente Prizm™ Bronze aumenta o contraste e valoriza tons terrosos. Perfeito para uso urbano, o modelo alia moda e tecnologia em um só design.'),
+-- --
+-- --     ('CYBERLINE', 2025, 'Unissex', 5.0, 'https://www.oakley.com/pt-br/product/W0OO9462?variant=888392643740',
+-- --      'Design futurista inspirado no universo digital.',
+-- --      'As linhas retas e a moldura em acetato reforçado garantem um visual moderno e marcante. Com lentes Prizm™ Black, o Cyberline entrega nitidez e conforto visual em qualquer ambiente.');
+-- --

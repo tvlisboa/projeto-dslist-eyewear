@@ -18,10 +18,10 @@ public class Oculos {
     private Double reviewScore;
     private String imgUrl;
 
-    @Column(length = 100)
+    @Column(length = 150)
     private String shortDescription;
 
-    @Column(length = 255)
+    @Column(length = 500)
     private String longDescription;
 
     public Oculos() {
