@@ -15,7 +15,8 @@ public class OculosMinDTO {
 
     /**
      * Instancia um OculosMinDTO,
-     * copiando os atributos da entidade.
+     * copiando os atributos da entidade e o que
+     * sera mostrado nas solicitacoes do usuario
      */
 
     public OculosMinDTO(Oculos entity) {

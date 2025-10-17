@@ -1,6 +1,5 @@
 package org.serratec.dev.dslistclothes.controllers;
 import org.serratec.dev.dslistclothes.dto.OculosMinDTO;
-import org.serratec.dev.dslistclothes.entities.Oculos;
 import org.serratec.dev.dslistclothes.services.OculosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -16,6 +16,9 @@ public class Oculos {
     private Integer year;
     private String genre;
     private Double reviewScore;
+
+    @Column(name = "cost_price")
+    private Double costPrice;
     private Double price;
     private String imgUrl;
 
@@ -29,7 +32,7 @@ public class Oculos {
     }
 
     public Oculos(Long id, String name, Integer year,
-                  String genre, Double reviewScore, Double price,
+                  String genre, Double reviewScore, Double costPrice, Double price,
                   String imgUrl, String shortDescription,
                   String longDescription) {
         this.id = id;
@@ -37,6 +40,7 @@ public class Oculos {
         this.year = year;
         this.genre = genre;
         this.reviewScore = reviewScore;
+        this.costPrice = costPrice;
         this.price = price;
         this.imgUrl = imgUrl;
         this.shortDescription = shortDescription;
@@ -81,6 +85,14 @@ public class Oculos {
 
     public void setReviewScore(Double reviewScore) {
         this.reviewScore = reviewScore;
+    }
+
+    public Double getCostPrice() {
+        return costPrice;
+    }
+
+    public void setCostPrice(Double costPrice) {
+        this.costPrice = costPrice;
     }
 
     public Double getPrice() {
