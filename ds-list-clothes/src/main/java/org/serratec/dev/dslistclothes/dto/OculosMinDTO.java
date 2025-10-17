@@ -8,6 +8,7 @@ public class OculosMinDTO {
     private Integer year;
     private String imgUrl;
     private String shortDescription;
+    private Double price;
 
     public OculosMinDTO(){
     }
@@ -23,6 +24,7 @@ public class OculosMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+        price = entity.getPrice();
     }
 
     /**
@@ -49,5 +51,9 @@ public class OculosMinDTO {
 
     public String getShortDescription() {
         return shortDescription;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 }
