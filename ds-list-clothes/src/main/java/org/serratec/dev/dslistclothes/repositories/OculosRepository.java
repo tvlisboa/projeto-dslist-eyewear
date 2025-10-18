@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface OculosRepository extends JpaRepository<Oculos, Long> {
-    List<Oculos> id(Long id);
+
 }
