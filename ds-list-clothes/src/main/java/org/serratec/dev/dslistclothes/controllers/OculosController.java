@@ -20,4 +20,10 @@ public class OculosController {
         List<OculosMinDTO> result = oculosService.findAll();
         return result;
     }
+
+    @GetMapping("/{id}")
+    public OculosMinDTO findById(Long id){
+        OculosMinDTO result = oculosService.findById((id));
+        return result;
+    }
 }

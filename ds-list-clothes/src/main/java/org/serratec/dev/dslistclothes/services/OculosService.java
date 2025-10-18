@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OculosService {
@@ -17,6 +18,12 @@ public class OculosService {
     public List<OculosMinDTO> findAll(){
         List<Oculos> result = oculosRepository.findAll();
         List<OculosMinDTO> dto = result.stream().map(x -> new OculosMinDTO(x)).toList();
+        return dto;
+    }
+
+    public OculosMinDTO findById(Long id){
+        Optional<Oculos> result = oculosRepository.findById(id);
+        OculosMinDTO dto = result.stream().map(x -> new OculosMinDTO(x)).toList().get(0);
         return dto;
     }
 }
