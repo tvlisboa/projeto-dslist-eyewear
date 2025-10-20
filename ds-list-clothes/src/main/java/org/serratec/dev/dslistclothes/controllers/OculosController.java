@@ -1,8 +1,10 @@
 package org.serratec.dev.dslistclothes.controllers;
+import org.serratec.dev.dslistclothes.dto.OculosDTO;
 import org.serratec.dev.dslistclothes.dto.OculosMinDTO;
 import org.serratec.dev.dslistclothes.services.OculosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +24,8 @@ public class OculosController {
     }
 
     @GetMapping("/{id}")
-    public OculosMinDTO findById(Long id){
-        OculosMinDTO result = oculosService.findById((id));
+    public OculosDTO findById(@PathVariable Long id){
+        OculosDTO result = oculosService.findById(id);
         return result;
     }
 }
