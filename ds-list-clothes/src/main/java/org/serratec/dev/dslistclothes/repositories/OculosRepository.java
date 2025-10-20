@@ -3,7 +3,11 @@ import org.serratec.dev.dslistclothes.entities.Oculos;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+/**
+ * Dentro do repository
+ * temos duas referencias discritas
+ * para o tipo da entidade e o tipo do id
+ */
 
 @Repository
 public interface OculosRepository extends JpaRepository<Oculos, Long> {

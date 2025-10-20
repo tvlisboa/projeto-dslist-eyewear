@@ -25,7 +25,8 @@ public class BelongingPK {
     public BelongingPK() {
     }
 
-    public BelongingPK(Oculos oculos, OculosList list) {
+    public BelongingPK(Oculos oculos,
+                       OculosList list) {
         this.oculos = oculos;
         this.list = list;
     }
@@ -45,6 +46,12 @@ public class BelongingPK {
     public void setList(OculosList list) {
         this.list = list;
     }
+
+    /**
+     * Quando utilizamos chaves primarias multiplas
+     * devemos fazer a comparacao com equals aos dois atributos
+     * no caso a seguir, foram as classes OCULOS e LIST
+     */
 
     @Override
     public boolean equals(Object o) {

@@ -7,6 +7,9 @@ import jakarta.persistence.Table;
 import java.util.Objects;
 
 /**
+ * Criado a classe pertence para que
+ * oculos ou outra classe jogo pertence a uma
+ * determinada lista
  * Para fazer referencia as chaves dos oculos e da lista
  * chamaos aqui o PK
  */
@@ -46,6 +49,11 @@ public class Belonging {
     public void setPosition(Integer position) {
         this.position = position;
     }
+
+    /**
+     * Comparacao das listas de pertencimentos
+     * feito pelo ID
+     */
 
     @Override
     public boolean equals(Object o) {
