@@ -22,6 +22,6 @@ public class OculosListService {
     @Transactional(readOnly = true)
     public List<OculosListDTO> findAll(){
         List<OculosList> result = oculosListRepository.findAll();
-        return result.stream().map( x -> new OculosListDTO(x)).toList();
+        return result.stream().map(x -> new OculosListDTO(x)).toList();
     }
 }
