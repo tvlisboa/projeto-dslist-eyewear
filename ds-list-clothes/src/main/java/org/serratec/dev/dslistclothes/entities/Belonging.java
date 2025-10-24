@@ -26,6 +26,13 @@ public class Belonging {
     public Belonging (){
     }
 
+    /**
+     * Utilizamos as entidades
+     * dentro do construtor
+     * passando as duas referencias
+     * pois ele tem ambos em sua estrutura
+     */
+
     public Belonging(Oculos oculos,
                      OculosList list,
                      Integer position) {
