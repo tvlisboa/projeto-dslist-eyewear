@@ -23,7 +23,7 @@ public class OculosController {
         return result;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}")
     public OculosDTO findById(@PathVariable Long id){
         OculosDTO result = oculosService.findById(id);
         return result;
