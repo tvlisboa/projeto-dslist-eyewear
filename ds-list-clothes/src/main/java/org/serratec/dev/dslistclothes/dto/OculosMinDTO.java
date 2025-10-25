@@ -29,12 +29,12 @@ public class OculosMinDTO {
         price = entity.getPrice();
     }
 
-    public OculosMinProjection(OculosMinProjection projection) {
+    public OculosMinDTO(OculosMinProjection projection) {
         id = projection.getId();
         name = projection.getName();
-        year = projection.getOculos_year();
-        imgUrl = projection.getImg_Url();
-        shortDescription = projection.getShort_Description();
+        year = projection.getOculosYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
         price = projection.getPrice();
     }
 

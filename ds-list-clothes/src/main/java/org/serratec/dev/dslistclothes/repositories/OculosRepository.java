@@ -17,15 +17,13 @@ import java.util.List;
 public interface OculosRepository extends JpaRepository<Oculos, Long> {
 
     @Query(nativeQuery = true, value = """
-            select tb_oculos.id, tb_oculos.name, tb_oculos.oculos_year, tb_oculos.genre, tb_oculos.review_score, 
-                               tb_oculos.cost_price, tb_oculos.price, tb_oculos.img_url, 
-                                           tb_oculos.short_description, tb_oculos.long_description, TB_BELONGING.position
-            from tb_oculos
-            inner join TB_BELONGING on tb_oculos.id = TB_BELONGING.oculos_id
+            SELECT tb_oculos.id, tb_oculos.name, tb_oculos.oculos_year AS oculosYear, tb_oculos.genre, tb_oculos.review_score AS reviewScore, 
+                               tb_oculos.cost_price as costPrice, tb_oculos.price, tb_oculos.img_url as imgUrl, 
+                                           tb_oculos.short_description as shortDescription, tb_oculos.long_description longDescription, TB_BELONGING.position
+            FROM tb_oculos
+            INNER JOIN TB_BELONGING on tb_oculos.id = TB_BELONGING.oculos_id
             WHERE TB_BELONGING.LIST_ID = :listId
             ORDER BY TB_BELONGING.position
-            """)
+                """)
     List<OculosMinProjection> searchByList(Long listId);
-
-
 }

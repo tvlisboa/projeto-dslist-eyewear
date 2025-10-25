@@ -1,0 +1,9 @@
+@Query(nativeQuery = true, value = """
+SELECT tb_oculos.id, tb_oculos.name, tb_oculos.oculos_year, tb_oculos.genre, tb_oculos.review_score, tb_oculos.cost_price, tb_oculos.price, tb_oculos.img_url, tb_oculos.short_description, tb_oculos.long_description,
+TB_BELONGING.position
+FROM tb_oculos
+INNER JOIN TB_BELONGING on tb_oculos.id = TB_BELONGING.oculos_id
+WHERE TB_BELONGING.LIST_ID = 3
+ORDER BY TB_BELONGING.position
+""")
+List<GameMinProjection> searchByList(Long listId);

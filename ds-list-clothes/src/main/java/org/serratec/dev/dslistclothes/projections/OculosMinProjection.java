@@ -3,13 +3,13 @@ package org.serratec.dev.dslistclothes.projections;
 public interface OculosMinProjection {
     Long getId();
     String getName();
-    Integer getOculos_year();
+    Integer getOculosYear();
     String getGenre();
-    Double getReview_Score();
-    Double getCost_Price();
+    Double getReviewScore();
+    Double getCostPrice();
     Double getPrice();
-    String getImg_Url();
-    String getShort_Description();
-    String getLong_Description();
-
+    String getImgUrl();
+    String getShortDescription();
+    String getLongDescription();
+    Integer getPosition();
 }
