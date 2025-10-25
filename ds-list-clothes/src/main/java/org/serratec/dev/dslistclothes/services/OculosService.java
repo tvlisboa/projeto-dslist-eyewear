@@ -3,6 +3,7 @@ package org.serratec.dev.dslistclothes.services;
 import org.serratec.dev.dslistclothes.dto.OculosDTO;
 import org.serratec.dev.dslistclothes.dto.OculosMinDTO;
 import org.serratec.dev.dslistclothes.entities.Oculos;
+import org.serratec.dev.dslistclothes.projections.OculosMinProjection;
 import org.serratec.dev.dslistclothes.repositories.OculosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,11 @@ public class OculosService {
         Oculos result = oculosRepository.findById(id).get();
         OculosDTO dto = new OculosDTO(result);
         return dto;
+    }
+
+    @Transactional(readOnly = true)
+    public List<OculosMinDTO> findBylist(Long listId){
+        List<OculosMinProjection> result = oculosRepository.searchByList(listId);
+        return result.stream().map(x -> new OculosMinDTO(x)).toList();
     }
 }

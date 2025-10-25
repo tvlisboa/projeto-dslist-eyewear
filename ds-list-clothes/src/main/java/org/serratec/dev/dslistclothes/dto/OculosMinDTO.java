@@ -1,6 +1,7 @@
 package org.serratec.dev.dslistclothes.dto;
 
 import org.serratec.dev.dslistclothes.entities.Oculos;
+import org.serratec.dev.dslistclothes.projections.OculosMinProjection;
 
 public class OculosMinDTO {
     private Long id;
@@ -27,6 +28,16 @@ public class OculosMinDTO {
         shortDescription = entity.getShortDescription();
         price = entity.getPrice();
     }
+
+    public OculosMinProjection(OculosMinProjection projection) {
+        id = projection.getId();
+        name = projection.getName();
+        year = projection.getOculos_year();
+        imgUrl = projection.getImg_Url();
+        shortDescription = projection.getShort_Description();
+        price = projection.getPrice();
+    }
+
 
     /**
      * O DTO, só utiliza GET pois ele ira receber os dados de outra entidade
