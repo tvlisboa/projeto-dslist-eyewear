@@ -1,14 +1,12 @@
 package org.serratec.dev.dslistclothes.controllers;
 import org.serratec.dev.dslistclothes.dto.OculosListDTO;
 import org.serratec.dev.dslistclothes.dto.OculosMinDTO;
+import org.serratec.dev.dslistclothes.dto.ReplacementDTO;
 import org.serratec.dev.dslistclothes.projections.OculosMinProjection;
 import org.serratec.dev.dslistclothes.services.OculosListService;
 import org.serratec.dev.dslistclothes.services.OculosService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -37,5 +35,10 @@ public class OculosListController {
     public List<OculosMinDTO> findByList(@RequestParam Long listId){
         List<OculosMinDTO> result = oculosService.findBylist(listId);
         return result;
+    }
+
+    @PostMapping(value = "/{listId}/oculos")
+    public void move(@PathVariable Long listId, @RequestParam ReplacementDTO body){
+        OculosListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
     }
 }
