@@ -8,6 +8,7 @@ import org.serratec.dev.dslistclothes.repositories.OculosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,20 +22,18 @@ public class OculosService {
     @Transactional(readOnly = true)
     public List<OculosMinDTO> findAll(){
         List<Oculos> result = oculosRepository.findAll();
-        List<OculosMinDTO> dto = result.stream().map(x -> new OculosMinDTO(x)).toList();
-        return dto;
+        return result.stream().map(OculosMinDTO::new).toList();
     }
 
     @Transactional(readOnly = true)
-    public OculosDTO findById(Long id){
+    public OculosDTO findById(@PathVariable Long id){
         Oculos result = oculosRepository.findById(id).get();
-        OculosDTO dto = new OculosDTO(result);
-        return dto;
+        return new OculosDTO(result);
     }
 
     @Transactional(readOnly = true)
     public List<OculosMinDTO> findBylist(Long listId){
-        List<OculosMinProjection> result = oculosRepository.searchByList(listId);
-        return result.stream().map(x -> new OculosMinDTO(x)).toList();
+        List<OculosMinProjection> oculos = oculosRepository.searchByList(listId);
+        return oculos.stream().map(OculosMinDTO::new).toList();
     }
 }

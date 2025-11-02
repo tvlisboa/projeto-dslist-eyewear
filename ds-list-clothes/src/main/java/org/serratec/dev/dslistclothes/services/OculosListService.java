@@ -1,9 +1,6 @@
 package org.serratec.dev.dslistclothes.services;
 
-import org.serratec.dev.dslistclothes.dto.OculosDTO;
 import org.serratec.dev.dslistclothes.dto.OculosListDTO;
-import org.serratec.dev.dslistclothes.dto.OculosMinDTO;
-import org.serratec.dev.dslistclothes.entities.Oculos;
 import org.serratec.dev.dslistclothes.entities.OculosList;
 import org.serratec.dev.dslistclothes.projections.OculosMinProjection;
 import org.serratec.dev.dslistclothes.repositories.OculosListRepository;
@@ -26,12 +23,14 @@ public class OculosListService {
     @Transactional(readOnly = true)
     public List<OculosListDTO> findAll(){
         List<OculosList> result = oculosListRepository.findAll();
-        return result.stream().map(x -> new OculosListDTO(x)).toList();
+        return result.stream().map(OculosListDTO::new).toList();
     }
 
     @Transactional
-    public static void move(Long listId, int sourceIndex, int destinationIndex){
+    public void move(Long listId, int sourceIndex, int destinationIndex){
+
         List<OculosMinProjection> list = oculosRepository.searchByList(listId);
+
         OculosMinProjection obj = list.remove(sourceIndex);
         list.add(destinationIndex, obj);
 
@@ -41,5 +40,11 @@ public class OculosListService {
         for(int i = min; i <= max; i++){
             oculosListRepository.updateBelongingPosition(listId, list.get(i).getId(), i);
         }
+    }
+
+    @Transactional(readOnly = true)
+    public OculosListDTO findById(Long listId){
+        OculosList entity = oculosListRepository.findById(listId).get();
+        return new OculosListDTO(entity);
     }
 }

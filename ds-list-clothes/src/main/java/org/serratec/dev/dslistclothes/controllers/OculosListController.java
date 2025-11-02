@@ -26,19 +26,25 @@ public class OculosListController {
         return result;
     }
 
+    @GetMapping(value = "/{id}")
+    public OculosListDTO findById(@PathVariable Long id){
+        OculosListDTO result = oculosListService.findById(id);
+        return result;
+    }
+
     /**
      * Consulta por listas e
      * os itens que sao pertencentes
      */
 
     @GetMapping(value = "/{listId}/oculos")
-    public List<OculosMinDTO> findByList(@RequestParam Long listId){
+    public List<OculosMinDTO> findByList(@PathVariable Long listId){
         List<OculosMinDTO> result = oculosService.findBylist(listId);
         return result;
     }
 
-    @PostMapping(value = "/{listId}/oculos")
-    public void move(@PathVariable Long listId, @RequestParam ReplacementDTO body){
+    @PostMapping(value = "/{listId}/replacement")
+    public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body){
         OculosListService.move(listId, body.getSourceIndex(), body.getDestinationIndex());
     }
 }
